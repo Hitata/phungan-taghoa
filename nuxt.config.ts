@@ -2,7 +2,8 @@
 export default defineNuxtConfig({
   devtools: { enabled: true },
   modules: [
-    '@nuxthq/ui'
+    // '@nuxt/image',
+    '@nuxthq/ui',
   ],
   colorMode: {
     preference: 'light',
