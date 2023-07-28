@@ -95,17 +95,19 @@ const tab = ref(null)
     </v-window>
     <div class="w-full mx-auto mt-6 max-w-2xl sm:px-6">
       <div class="flex justify-center aspect-h-5 aspect-w-4 lg:aspect-h-4 lg:aspect-w-3 sm:overflow-hidden sm:rounded-lg">
-        <img :src="selectedColor.image" :alt="selectedColor.image" class="h-full w-full object-cover object-center">
+        <img :src="selectedColor.image" :alt="selectedColor.image"
+          class="h-full w-auto object-cover object-center"
+        >
         <img :src="selectedCanhColor.image" :alt="selectedCanhColor.image"
-          class="absolute h-full w-full object-cover object-center">
+          class="h-full w-auto absolute object-cover object-center">
         <img :src="selectedNhuyColor.image" :alt="selectedNhuyColor.image"
-          class="absolute h-full w-full object-cover object-center">
+          class="h-full w-auto absolute object-cover object-center">
         <div class="justify-self-center relative -rotate-90">
           <div class="absolute left-0">{{ ten }}</div>
         </div>
       </div>
     </div>
-    <div class="w-full mx-auto mt-6 max-w-2xl sm:px-6">
+    <div class="flex flex-col align-center border-t">
       <p>Mang vẻ hiện đại hợp hoá tinh hoa</p>
       <p>Đa dạng chất liệu văn hoá Việt,</p>
       <p>Tag hoa thủ công là tặng phẩm do Phùng Ân thiết kế,</p>
