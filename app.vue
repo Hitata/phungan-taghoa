@@ -4,8 +4,8 @@ const double = computed(() => count.value * 2)
 </script>
 <template>
   <Html lang="en">
-    <NuxtLayout>
+    <v-card class="px-2 mx-auto max-w-md">
       <NuxtPage />
-    </NuxtLayout>
+    </v-card>
   </Html>
 </template>
