@@ -1,7 +1,5 @@
 <script setup lang="ts">
 import { ref } from 'vue'
-import { RadioGroup, RadioGroupLabel, RadioGroupOption } from '@headlessui/vue'
-
 
 const colors = [
   { name: 'white', class: 'bg-white-600', selectedClass: 'ring-gray-500', image: "/images/REGENT_Trung thu 2023_Charm.5.png" },
@@ -38,7 +36,7 @@ const tab = ref(null)
 <template>
   <v-card>
     <v-toolbar color="transparent" class="px-0">
-      <v-toolbar-title>Phung An</v-toolbar-title>
+      <v-toolbar-title>PHÙNG ÂN</v-toolbar-title>
       <v-spacer></v-spacer>
       <v-app-bar-nav-icon></v-app-bar-nav-icon>
       <template v-slot:extension>
@@ -93,7 +91,7 @@ const tab = ref(null)
         </div>
       </v-window-item>
     </v-window>
-    <div class="w-full mx-auto mt-6 max-w-2xl sm:px-6">
+    <div id="capture" class="w-full mx-auto mt-6 max-w-2xl sm:px-6">
       <div class="flex justify-center aspect-h-5 aspect-w-4 lg:aspect-h-4 lg:aspect-w-3 sm:overflow-hidden sm:rounded-lg">
         <img :src="selectedColor.image" :alt="selectedColor.image"
           class="h-full w-auto object-cover object-center"
@@ -112,6 +110,16 @@ const tab = ref(null)
       <p>Đa dạng chất liệu văn hoá Việt,</p>
       <p>Tag hoa thủ công là tặng phẩm do Phùng Ân thiết kế,</p>
       <p>sản xuất bởi nghệ nhân Việt.</p>
+    </div>
+    <div class="flex flex-col align-center border-t">
+      <p>Mang vẻ hiện đại hợp hoá tinh hoa</p>
+      <p>Đa dạng chất liệu văn hoá Việt,</p>
+      <p>Tag hoa thủ công là tặng phẩm do Phùng Ân thiết kế,</p>
+      <p>sản xuất bởi nghệ nhân Việt.</p>
+    </div>
+
+    <div class="sticky right bottom">
+      <Capture></Capture>
     </div>
   </v-card>
 </template>
