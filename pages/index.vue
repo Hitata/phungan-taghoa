@@ -2,30 +2,30 @@
 import { ref } from 'vue'
 
 const colors = [
-  { name: 'black', class: 'bg-gray-600', selectedClass: 'ring-gray-500', image: "/images/PA_Trung thu 2023_Charm Customize.44.png" },
-  { name: 'white', class: 'bg-white-600', selectedClass: 'ring-gray-500', image: "/images/PA_Trung thu 2023_Charm Customize.39.png" },
-  { name: 'pink', class: 'bg-pink-300', selectedClass: 'ring-gray-500', image: "/images/PA_Trung thu 2023_Charm Customize.33.png" },
-  { name: 'yellow', class: 'bg-yellow-300', selectedClass: 'ring-gray-500', image: "/images/PA_Trung thu 2023_Charm Customize.30.png" },
-  { name: 'green', class: 'bg-green-400', selectedClass: 'ring-gray-500', image: "/images/PA_Trung thu 2023_Charm Customize.27.png" },
-  { name: 'blue', class: 'bg-blue-800', selectedClass: 'ring-gray-500', image: "/images/PA_Trung thu 2023_Charm Customize.24.png" },
+  { name: 'black', class: 'bg-bla', text: 'text-bla', selectedClass: 'ring-gray-500', image: "/images/PA_Trung thu 2023_Charm Customize.44.png" },
+  { name: 'white', class: 'bg-whi', text: 'text-whi', selectedClass: 'ring-gray-500', image: "/images/PA_Trung thu 2023_Charm Customize.39.png" },
+  { name: 'pink', class: 'bg-pin', text: 'text-pin', selectedClass: 'ring-gray-500', image: "/images/PA_Trung thu 2023_Charm Customize.33.png" },
+  { name: 'yellow', class: 'bg-yel', text: 'text-yel', selectedClass: 'ring-gray-500', image: "/images/PA_Trung thu 2023_Charm Customize.30.png" },
+  { name: 'green', class: 'bg-gre', text: 'text-gre', selectedClass: 'ring-gray-500', image: "/images/PA_Trung thu 2023_Charm Customize.27.png" },
+  { name: 'blue', class: 'bg-blu', text: 'text-blu', selectedClass: 'ring-gray-500', image: "/images/PA_Trung thu 2023_Charm Customize.24.png" },
 ]
 
 const canhColors = [
-  { name: 'black', class: 'bg-gray-600', selectedClass: 'ring-gray-500', image: "/images/PA_Trung thu 2023_Charm Customize.45.png" },
-  { name: 'white', class: 'bg-white-600', selectedClass: 'ring-gray-500', image: "/images/PA_Trung thu 2023_Charm Customize.40.png" },
-  { name: 'pink', class: 'bg-pink-300', selectedClass: 'ring-gray-500', image: "/images/PA_Trung thu 2023_Charm Customize.34.png" },
-  { name: 'yellow', class: 'bg-yellow-300', selectedClass: 'ring-gray-500', image: "/images/PA_Trung thu 2023_Charm Customize.31.png" },
-  { name: 'green', class: 'bg-green-400', selectedClass: 'ring-gray-500', image: "/images/PA_Trung thu 2023_Charm Customize.28.png" },
-  { name: 'blue', class: 'bg-blue-800', selectedClass: 'ring-gray-500', image: "/images/PA_Trung thu 2023_Charm Customize.25.png" },
+  { name: 'black', class: 'bg-bla', text: 'text-bla', selectedClass: 'ring-gray-500', image: "/images/PA_Trung thu 2023_Charm Customize.45.png" },
+  { name: 'white', class: 'bg-whi', text: 'text-whi', selectedClass: 'ring-gray-500', image: "/images/PA_Trung thu 2023_Charm Customize.40.png" },
+  { name: 'pink', class: 'bg-pin', text: 'text-pin', selectedClass: 'ring-gray-500', image: "/images/PA_Trung thu 2023_Charm Customize.34.png" },
+  { name: 'yellow', class: 'bg-yel', text: 'text-yel', selectedClass: 'ring-gray-500', image: "/images/PA_Trung thu 2023_Charm Customize.31.png" },
+  { name: 'green', class: 'bg-gre', text: 'text-gre', selectedClass: 'ring-gray-500', image: "/images/PA_Trung thu 2023_Charm Customize.28.png" },
+  { name: 'blue', class: 'bg-blu', text: 'text-blu', selectedClass: 'ring-gray-500', image: "/images/PA_Trung thu 2023_Charm Customize.25.png" },
 ]
 
 const nhuyColors = [
-  { name: 'black', class: 'bg-gray-600', selectedClass: 'ring-gray-500', image: "/images/PA_Trung thu 2023_Charm Customize.45.png" },
-  { name: 'white', class: 'bg-white-600', selectedClass: 'ring-gray-500', image: "/images/PA_Trung thu 2023_Charm Customize.41.png" },
-  { name: 'pink', class: 'bg-pink-300', selectedClass: 'ring-gray-500', image: "/images/PA_Trung thu 2023_Charm Customize.35.png" },
-  { name: 'yellow', class: 'bg-yellow-300', selectedClass: 'ring-gray-500', image: "/images/PA_Trung thu 2023_Charm Customize.32.png" },
-  { name: 'green', class: 'bg-green-400', selectedClass: 'ring-gray-500', image: "/images/PA_Trung thu 2023_Charm Customize.29.png" },
-  { name: 'blue', class: 'bg-blue-800', selectedClass: 'ring-gray-500', image: "/images/PA_Trung thu 2023_Charm Customize.26.png" },
+  { name: 'black', class: 'bg-bla', text: 'text-bla', selectedClass: 'ring-gray-500', image: "/images/PA_Trung thu 2023_Charm Customize.46.png" },
+  { name: 'white', class: 'bg-whi', text: 'text-whi', selectedClass: 'ring-gray-500', image: "/images/PA_Trung thu 2023_Charm Customize.41.png" },
+  { name: 'pink', class: 'bg-pin', text: 'text-pin', selectedClass: 'ring-gray-500', image: "/images/PA_Trung thu 2023_Charm Customize.35.png" },
+  { name: 'yellow', class: 'bg-yel', text: 'text-yel', selectedClass: 'ring-gray-500', image: "/images/PA_Trung thu 2023_Charm Customize.32.png" },
+  { name: 'green', class: 'bg-gre', text: 'text-gre', selectedClass: 'ring-gray-500', image: "/images/PA_Trung thu 2023_Charm Customize.29.png" },
+  { name: 'blue', class: 'bg-blu', text: 'text-blu', selectedClass: 'ring-gray-500', image: "/images/PA_Trung thu 2023_Charm Customize.26.png" },
 ]
 
 
@@ -34,26 +34,41 @@ const selectedCanhColor = ref(canhColors[0])
 const selectedNhuyColor = ref(nhuyColors[0])
 const ten = ref('phungan')
 const tab = ref(null)
+const files = ref(undefined)
 
+const rules = ref([
+  (value: any) => !value || !value.length || value[0].size < 2000000 || 'Kích thước logo phải nhỏ hơn 2 MB!',
+])
+const url: any = computed(() => {
+  if(!files.value) return
+  if (!files.value[0]) return
+  return URL.createObjectURL(files.value[0])
+})
 </script>
 <template>
   <v-card>
     <v-toolbar color="transparent" class="px-0">
-      <v-toolbar-title>PHÙNG ÂN</v-toolbar-title>
+      <v-toolbar-title>
+        <img src="/images/Phung An logotype transparent-black.png" alt="PHÙNG ÂN logotype" width="125px" />
+      </v-toolbar-title>
       <v-spacer></v-spacer>
       <v-app-bar-nav-icon></v-app-bar-nav-icon>
       <template v-slot:extension>
         <v-tabs v-model="tab" color="primary" align-tabs="center" grow>
           <v-tab value="one">
-            Dây Hoa
+            <span class="font-semibold" :class="[ selectedColor ? selectedColor.text : null ]">Dây</span>
             <!-- <v-icon>mdi-phone</v-icon> -->
           </v-tab>
           <v-tab value="two">
-            Cánh Hoa
+            <span class="font-semibold" :class="[ selectedCanhColor ? selectedCanhColor.text : null ]">Cánh</span>
             <!-- <v-icon>mdi-heart</v-icon> -->
           </v-tab>
           <v-tab value="three">
-            Nhụy Hoa
+            <span class="font-semibold" :class="[ selectedNhuyColor ? selectedNhuyColor.text : null ]">Nhụy</span>
+            <!-- <v-icon>mdi-account-box</v-icon> -->
+          </v-tab>
+          <v-tab value="four">
+            Khắc Chữ
             <!-- <v-icon>mdi-account-box</v-icon> -->
           </v-tab>
         </v-tabs>
@@ -70,41 +85,40 @@ const tab = ref(null)
         <items v-model="selectedNhuyColor" :colors="nhuyColors" />
       </v-window-item>
       <v-window-item value="four">
-        <div class="flex justify-center w-full">
-          <label for="first-name" class="block text-sm font-semibold leading-6 text-gray-900">First name</label>
-          <div class="mt-2.5">
-            <input v-model="ten" type="text" name="first-name" id="first-name" autocomplete="given-name"
-              class="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" />
-          </div>
-
-          <label for="dropzone-file"
-            class="flex flex-col items-center justify-center w-full h-64 border-2 border-gray-300 border-dashed rounded-lg cursor-pointer bg-gray-50 dark:hover:bg-bray-800 dark:bg-gray-700 hover:bg-gray-100 dark:border-gray-600 dark:hover:border-gray-500 dark:hover:bg-gray-600">
-            <div class="flex flex-col items-center justify-center pt-5 pb-6">
-              <svg class="w-8 h-8 mb-4 text-gray-500 dark:text-gray-400" aria-hidden="true"
-                xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 16">
-                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                  d="M13 13h3a3 3 0 0 0 0-6h-.025A5.56 5.56 0 0 0 16 6.5 5.5 5.5 0 0 0 5.207 5.021C5.137 5.017 5.071 5 5 5a4 4 0 0 0 0 8h2.167M10 15V6m0 0L8 8m2-2 2 2" />
-              </svg>
-              <p class="mb-2 text-sm text-gray-500 dark:text-gray-400"><span class="font-semibold">Click to upload</span>
-                or drag and drop</p>
-              <p class="text-xs text-gray-500 dark:text-gray-400">SVG, PNG, JPG or GIF (MAX. 800x400px)</p>
-            </div>
-            <input id="dropzone-file" type="file" class="hidden" />
-          </label>
-        </div>
+        <v-sheet class="ma-2 pa-3">
+          <v-text-field
+            v-model="ten"
+            label="Khắc chữ"
+            density="compact"
+            clearable
+          ></v-text-field>
+          <v-file-input
+            v-model="files"
+            :rules="rules"
+            chips
+            accept="image/png, image/jpeg, image/bmp"
+            density="compact"
+            label="Khắc logo"
+            placeholder="Chọn logo của bạn"
+            clearable
+          ></v-file-input>
+        </v-sheet>
       </v-window-item>
     </v-window>
-    <div id="capture" class="w-full mx-auto bg-slate-400">
+    <div id="capture" class="w-full mx-auto bg-slate">
       <div class="relative flex justify-center">
-        <img :src="selectedColor.image" :alt="selectedColor.image"
-          class="h-full w-auto object-cover object-center"
-        >
+        <img :src="selectedColor.image" :alt="selectedColor.image" class="h-full w-auto object-cover object-center">
         <img :src="selectedCanhColor.image" :alt="selectedCanhColor.image"
           class="h-full w-auto absolute object-cover object-center">
         <img :src="selectedNhuyColor.image" :alt="selectedNhuyColor.image"
           class="h-full w-auto absolute object-cover object-center">
         <div class="justify-self-center relative -rotate-90">
-          <div class="absolute left-0">{{ ten }}</div>
+          <div class="absolute -left-9 -top-3.5">
+            <div class="h-6 w-24 flex justify-center">
+              <img v-if="files" :src="url" class="object-fill"/>
+              <span v-else class="">{{ ten }}</span>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -115,13 +129,10 @@ const tab = ref(null)
       <p>sản xuất bởi nghệ nhân Việt.</p>
     </div>
     <div class="flex flex-col align-center border-t">
-      <p>Mang vẻ hiện đại hợp hoá tinh hoa</p>
-      <p>Đa dạng chất liệu văn hoá Việt,</p>
-      <p>Tag hoa thủ công là tặng phẩm do Phùng Ân thiết kế,</p>
-      <p>sản xuất bởi nghệ nhân Việt.</p>
+
     </div>
 
-    <div class="sticky right bottom">
+    <div class="fixed z-90 bottom-5 right-5 flex justify-center items-center">
       <Capture></Capture>
     </div>
   </v-card>
