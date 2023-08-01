@@ -49,7 +49,7 @@ const url: any = computed(() => {
   <v-card>
     <v-toolbar color="transparent" class="px-0">
       <v-toolbar-title>
-        <img src="/images/Phung An logotype transparent-black.png" alt="PHÙNG ÂN logotype" width="125px" />
+        <img src="/images/phungan-logo.png" alt="PHÙNG ÂN logotype" width="125px" />
       </v-toolbar-title>
       <v-spacer></v-spacer>
       <v-app-bar-nav-icon></v-app-bar-nav-icon>
