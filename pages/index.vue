@@ -2,27 +2,30 @@
 import { ref } from 'vue'
 
 const colors = [
-  { name: 'white', class: 'bg-white-600', selectedClass: 'ring-gray-500', image: "/images/REGENT_Trung thu 2023_Charm.5.png" },
-  { name: 'pink', class: 'bg-pink-300', selectedClass: 'ring-gray-500', image: "/images/REGENT_Trung thu 2023_Charm.5.png" },
-  { name: 'yellow', class: 'bg-yellow-300', selectedClass: 'ring-gray-500', image: "/images/REGENT_Trung thu 2023_Charm.25.png" },
-  { name: 'green', class: 'bg-green-400', selectedClass: 'ring-gray-500', image: "/images/REGENT_Trung thu 2023_Charm.18.png" },
-  { name: 'blue', class: 'bg-blue-800', selectedClass: 'ring-gray-500', image: "/images/REGENT_Trung thu 2023_Charm.22.png" },
+  { name: 'black', class: 'bg-gray-600', selectedClass: 'ring-gray-500', image: "/images/PA_Trung thu 2023_Charm Customize.44.png" },
+  { name: 'white', class: 'bg-white-600', selectedClass: 'ring-gray-500', image: "/images/PA_Trung thu 2023_Charm Customize.39.png" },
+  { name: 'pink', class: 'bg-pink-300', selectedClass: 'ring-gray-500', image: "/images/PA_Trung thu 2023_Charm Customize.33.png" },
+  { name: 'yellow', class: 'bg-yellow-300', selectedClass: 'ring-gray-500', image: "/images/PA_Trung thu 2023_Charm Customize.30.png" },
+  { name: 'green', class: 'bg-green-400', selectedClass: 'ring-gray-500', image: "/images/PA_Trung thu 2023_Charm Customize.27.png" },
+  { name: 'blue', class: 'bg-blue-800', selectedClass: 'ring-gray-500', image: "/images/PA_Trung thu 2023_Charm Customize.24.png" },
 ]
 
 const canhColors = [
-  { name: 'white', class: 'bg-white-600', selectedClass: 'ring-gray-500', image: "/images/REGENT_Trung thu 2023_Charm.23.png" },
-  { name: 'pink', class: 'bg-pink-300', selectedClass: 'ring-gray-500', image: "/images/REGENT_Trung thu 2023_Charm.23.png" },
-  { name: 'yellow', class: 'bg-yellow-300', selectedClass: 'ring-gray-500', image: "/images/REGENT_Trung thu 2023_Charm.27.png" },
-  { name: 'green', class: 'bg-green-400', selectedClass: 'ring-gray-500', image: "/images/REGENT_Trung thu 2023_Charm.20.png" },
-  { name: 'blue', class: 'bg-blue-800', selectedClass: 'ring-gray-500', image: "/images/REGENT_Trung thu 2023_Charm.23.png" },
+  { name: 'black', class: 'bg-gray-600', selectedClass: 'ring-gray-500', image: "/images/PA_Trung thu 2023_Charm Customize.45.png" },
+  { name: 'white', class: 'bg-white-600', selectedClass: 'ring-gray-500', image: "/images/PA_Trung thu 2023_Charm Customize.40.png" },
+  { name: 'pink', class: 'bg-pink-300', selectedClass: 'ring-gray-500', image: "/images/PA_Trung thu 2023_Charm Customize.34.png" },
+  { name: 'yellow', class: 'bg-yellow-300', selectedClass: 'ring-gray-500', image: "/images/PA_Trung thu 2023_Charm Customize.31.png" },
+  { name: 'green', class: 'bg-green-400', selectedClass: 'ring-gray-500', image: "/images/PA_Trung thu 2023_Charm Customize.28.png" },
+  { name: 'blue', class: 'bg-blue-800', selectedClass: 'ring-gray-500', image: "/images/PA_Trung thu 2023_Charm Customize.25.png" },
 ]
 
 const nhuyColors = [
-  { name: 'white', class: 'bg-white-600', selectedClass: 'ring-gray-500', image: "/images/REGENT_Trung thu 2023_Charm.24.png" },
-  { name: 'pink', class: 'bg-pink-300', selectedClass: 'ring-gray-500', image: "/images/REGENT_Trung thu 2023_Charm.24.png" },
-  { name: 'yellow', class: 'bg-yellow-300', selectedClass: 'ring-gray-500', image: "/images/REGENT_Trung thu 2023_Charm.28.png" },
-  { name: 'green', class: 'bg-green-400', selectedClass: 'ring-gray-500', image: "/images/REGENT_Trung thu 2023_Charm.21.png" },
-  { name: 'blue', class: 'bg-blue-800', selectedClass: 'ring-gray-500', image: "/images/REGENT_Trung thu 2023_Charm.24.png" },
+  { name: 'black', class: 'bg-gray-600', selectedClass: 'ring-gray-500', image: "/images/PA_Trung thu 2023_Charm Customize.45.png" },
+  { name: 'white', class: 'bg-white-600', selectedClass: 'ring-gray-500', image: "/images/PA_Trung thu 2023_Charm Customize.41.png" },
+  { name: 'pink', class: 'bg-pink-300', selectedClass: 'ring-gray-500', image: "/images/PA_Trung thu 2023_Charm Customize.35.png" },
+  { name: 'yellow', class: 'bg-yellow-300', selectedClass: 'ring-gray-500', image: "/images/PA_Trung thu 2023_Charm Customize.32.png" },
+  { name: 'green', class: 'bg-green-400', selectedClass: 'ring-gray-500', image: "/images/PA_Trung thu 2023_Charm Customize.29.png" },
+  { name: 'blue', class: 'bg-blue-800', selectedClass: 'ring-gray-500', image: "/images/PA_Trung thu 2023_Charm Customize.26.png" },
 ]
 
 
@@ -91,8 +94,8 @@ const tab = ref(null)
         </div>
       </v-window-item>
     </v-window>
-    <div id="capture" class="w-full mx-auto mt-6 max-w-2xl sm:px-6">
-      <div class="flex justify-center aspect-h-5 aspect-w-4 lg:aspect-h-4 lg:aspect-w-3 sm:overflow-hidden sm:rounded-lg">
+    <div id="capture" class="w-full mx-auto bg-slate-400">
+      <div class="relative flex justify-center">
         <img :src="selectedColor.image" :alt="selectedColor.image"
           class="h-full w-auto object-cover object-center"
         >
