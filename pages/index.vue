@@ -40,7 +40,7 @@ const rules = ref([
   (value: any) => !value || !value.length || value[0].size < 2000000 || 'Kích thước logo phải nhỏ hơn 2 MB!',
 ])
 const url: any = computed(() => {
-  if(!files.value) return
+  if (!files.value) return
   if (!files.value[0]) return
   return URL.createObjectURL(files.value[0])
 })
@@ -56,15 +56,15 @@ const url: any = computed(() => {
       <template v-slot:extension>
         <v-tabs v-model="tab" color="primary" align-tabs="center" grow>
           <v-tab value="one">
-            <span class="font-semibold" :class="[ selectedColor ? selectedColor.text : null ]">Dây</span>
+            <span class="font-semibold" :class="[selectedColor ? selectedColor.text : null]">Dây</span>
             <!-- <v-icon>mdi-phone</v-icon> -->
           </v-tab>
           <v-tab value="two">
-            <span class="font-semibold" :class="[ selectedCanhColor ? selectedCanhColor.text : null ]">Cánh</span>
+            <span class="font-semibold" :class="[selectedCanhColor ? selectedCanhColor.text : null]">Cánh</span>
             <!-- <v-icon>mdi-heart</v-icon> -->
           </v-tab>
           <v-tab value="three">
-            <span class="font-semibold" :class="[ selectedNhuyColor ? selectedNhuyColor.text : null ]">Nhụy</span>
+            <span class="font-semibold" :class="[selectedNhuyColor ? selectedNhuyColor.text : null]">Nhụy</span>
             <!-- <v-icon>mdi-account-box</v-icon> -->
           </v-tab>
           <v-tab value="four">
@@ -86,22 +86,9 @@ const url: any = computed(() => {
       </v-window-item>
       <v-window-item value="four">
         <v-sheet class="ma-2 pa-3">
-          <v-text-field
-            v-model="ten"
-            label="Khắc chữ"
-            density="compact"
-            clearable
-          ></v-text-field>
-          <v-file-input
-            v-model="files"
-            :rules="rules"
-            chips
-            accept="image/png, image/jpeg, image/bmp"
-            density="compact"
-            label="Khắc logo"
-            placeholder="Chọn logo của bạn"
-            clearable
-          ></v-file-input>
+          <v-text-field v-model="ten" label="Khắc chữ" density="compact" clearable></v-text-field>
+          <v-file-input v-model="files" :rules="rules" chips accept="image/png, image/jpeg, image/bmp" density="compact"
+            label="Khắc logo" placeholder="Chọn logo của bạn" clearable></v-file-input>
         </v-sheet>
       </v-window-item>
     </v-window>
@@ -113,26 +100,26 @@ const url: any = computed(() => {
         <img :src="selectedNhuyColor.image" :alt="selectedNhuyColor.image"
           class="h-full w-auto absolute object-cover object-center">
         <div class="justify-self-center relative -rotate-90">
-          <div class="absolute -left-9 -top-3.5">
+          <div v-if="files" class="absolute -left-9 -top-3.5">
             <div class="h-6 w-24 flex justify-center">
-              <img v-if="files" :src="url" class="object-fill"/>
-              <span v-else class="">{{ ten }}</span>
+              <img :src="url" class="object-fill" />
+            </div>
+          </div>
+          <div v-else class="absolute -left-9 -top-4">
+            <div class="h-6 w-24 flex justify-center">
+              <span class="">{{ ten }}</span>
             </div>
           </div>
         </div>
       </div>
     </div>
-    <div class="flex flex-col align-center border-t">
+    <div class="flex flex-col align-center border-t border-b py-6 mx-6">
       <p>Mang vẻ hiện đại hợp hoá tinh hoa</p>
-      <p>Đa dạng chất liệu văn hoá Việt,</p>
+      <p>đa dạng chất liệu văn hoá Việt,</p>
       <p>Tag hoa thủ công là tặng phẩm do Phùng Ân thiết kế,</p>
       <p>sản xuất bởi nghệ nhân Việt.</p>
     </div>
-    <div class="flex flex-col align-center border-t">
-
-    </div>
-
-    <div class="fixed z-90 bottom-5 right-5 flex justify-center items-center">
+    <div class="my-6 flex justify-center items-center">
       <Capture></Capture>
     </div>
   </v-card>

@@ -15,9 +15,10 @@ const capture = () => {
 <template>
   <v-btn
     rounded
+    class="w-32"
     variant="outlined"
-    elevation="20"
-    size="x-large"
+    elevation="5"
+    size="large"
     color="bg-white"
     @click="capture"
   >TẢI VỀ</v-btn>
