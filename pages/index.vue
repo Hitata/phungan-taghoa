@@ -109,7 +109,7 @@ const url: any = computed(() => {
          <div class="absolute -left-9 -top-3.5">
             <div class="h-6 w-24 flex justify-center">
               <span
-                class="uppercase"
+                class="uppercase font-candara"
                 :class="[isBlack ? 'text-whi' : 'text-bla']">{{ ten }}</span>
             </div>
           </div>
@@ -117,10 +117,10 @@ const url: any = computed(() => {
       </div>
     </div>
     <div class="flex flex-col align-center border-t border-b py-6 mx-6">
-      <p>Mang vẻ hiện đại hợp hoá tinh hoa</p>
-      <p>đa dạng chất liệu văn hoá Việt,</p>
-      <p>Tag hoa thủ công là tặng phẩm do Phùng Ân thiết kế,</p>
-      <p>sản xuất bởi nghệ nhân Việt.</p>
+      <p>Hợp hoá tinh hoa chất liệu văn hoá trong diện mạo hiện đại,</p>
+      <p>trong diện mạo hiện đại, dây hoa da</p>
+      <p>là tặng phẩm cao cấp Phùng Ân thiết kế </p>
+      <p>và sản xuất dành riêng cho mùa trăng 2023.</p>
     </div>
     <div class="my-6 flex justify-center items-center">
       <Capture></Capture>
