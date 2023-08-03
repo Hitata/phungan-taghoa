@@ -29,7 +29,8 @@ const nhuyColors = [
 ]
 
 
-const selectedColor = ref(colors[0])
+const selectedColor = useState('share-this', () => colors[0]);
+const isBlack = computed(() => selectedColor.value.name == 'black')
 const selectedCanhColor = ref(canhColors[0])
 const selectedNhuyColor = ref(nhuyColors[0])
 const ten = ref('phungan')
@@ -86,9 +87,14 @@ const url: any = computed(() => {
       </v-window-item>
       <v-window-item value="four">
         <v-sheet class="ma-2 pa-3">
-          <v-text-field v-model="ten" label="Khắc chữ" density="compact" clearable></v-text-field>
-          <v-file-input v-model="files" :rules="rules" chips accept="image/png, image/jpeg, image/bmp" density="compact"
-            label="Khắc logo" placeholder="Chọn logo của bạn" clearable></v-file-input>
+          <v-text-field
+            v-model="ten"
+            label="Khắc chữ"
+            density="compact"
+            clearable
+          ></v-text-field>
+          <!-- <v-file-input v-model="files" :rules="rules" chips accept="image/png, image/jpeg, image/bmp" density="compact"
+            label="Khắc logo" placeholder="Chọn logo của bạn" clearable></v-file-input> -->
         </v-sheet>
       </v-window-item>
     </v-window>
@@ -100,14 +106,11 @@ const url: any = computed(() => {
         <img :src="selectedNhuyColor.image" :alt="selectedNhuyColor.image"
           class="h-full w-auto absolute object-cover object-center">
         <div class="justify-self-center relative -rotate-90">
-          <div v-if="files" class="absolute -left-9 -top-3.5">
+         <div class="absolute -left-9 -top-3.5">
             <div class="h-6 w-24 flex justify-center">
-              <img :src="url" class="object-fill" />
-            </div>
-          </div>
-          <div v-else class="absolute -left-9 -top-4">
-            <div class="h-6 w-24 flex justify-center">
-              <span class="">{{ ten }}</span>
+              <span
+                class="uppercase"
+                :class="[isBlack ? 'text-whi' : 'text-bla']">{{ ten }}</span>
             </div>
           </div>
         </div>
