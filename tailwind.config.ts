@@ -1,4 +1,5 @@
 import type { Config } from 'tailwindcss'
+const defaultTheme = require('tailwindcss/defaultTheme')
 
 export default <Partial<Config>>{
   content: [
@@ -8,6 +9,9 @@ export default <Partial<Config>>{
   ],
   theme: {
     extend: {
+      fontFamily: {
+        'candara': ['Candara', 'Calibri', 'Segoe', ...defaultTheme.fontFamily.sans]
+      },
       colors: {
         'bla': '#272727',
         'whi': '#ded9cc',

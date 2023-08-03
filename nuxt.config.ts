@@ -6,6 +6,9 @@ export default defineNuxtConfig({
     '@nuxthq/ui',
     '@invictus.codes/nuxt-vuetify',
   ],
+  css: [
+    "/public/global.css"
+  ],
   vuetify: {
     /* vuetify options */
     vuetifyOptions: {

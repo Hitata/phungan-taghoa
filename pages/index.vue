@@ -57,15 +57,15 @@ const url: any = computed(() => {
       <template v-slot:extension>
         <v-tabs v-model="tab" color="primary" align-tabs="center" grow>
           <v-tab value="one">
-            <span class="font-semibold" :class="[selectedColor ? selectedColor.text : null]">Dây</span>
+            <span class="" :class="[selectedColor ? selectedColor.text : null]">Dây</span>
             <!-- <v-icon>mdi-phone</v-icon> -->
           </v-tab>
           <v-tab value="two">
-            <span class="font-semibold" :class="[selectedCanhColor ? selectedCanhColor.text : null]">Cánh</span>
+            <span class="" :class="[selectedCanhColor ? selectedCanhColor.text : null]">Cánh</span>
             <!-- <v-icon>mdi-heart</v-icon> -->
           </v-tab>
           <v-tab value="three">
-            <span class="font-semibold" :class="[selectedNhuyColor ? selectedNhuyColor.text : null]">Nhụy</span>
+            <span class="" :class="[selectedNhuyColor ? selectedNhuyColor.text : null]">Nhụy</span>
             <!-- <v-icon>mdi-account-box</v-icon> -->
           </v-tab>
           <v-tab value="four">
@@ -106,10 +106,11 @@ const url: any = computed(() => {
         <img :src="selectedNhuyColor.image" :alt="selectedNhuyColor.image"
           class="h-full w-auto absolute object-cover object-center">
         <div class="justify-self-center relative -rotate-90">
-         <div class="absolute -left-9 -top-3.5">
+         <div class="absolute -left-9 -top-4">
             <div class="h-6 w-24 flex justify-center">
               <span
-                class="uppercase font-candara"
+                class="uppercase text-xl"
+                style="font-family: 'Candara', sans-serif;"
                 :class="[isBlack ? 'text-whi' : 'text-bla']">{{ ten }}</span>
             </div>
           </div>
