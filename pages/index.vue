@@ -106,10 +106,10 @@ const url: any = computed(() => {
         <img :src="selectedNhuyColor.image" :alt="selectedNhuyColor.image"
           class="h-full w-auto absolute object-cover object-center">
         <div class="justify-self-center relative -rotate-90">
-         <div class="absolute -left-9 -top-4">
+         <div class="absolute -left-9 -top-3.5">
             <div class="h-6 w-24 flex justify-center">
               <span
-                class="uppercase text-xl"
+                class="uppercase"
                 style="font-family: 'Candara', sans-serif;"
                 :class="[isBlack ? 'text-whi' : 'text-bla']">{{ ten }}</span>
             </div>
@@ -118,10 +118,7 @@ const url: any = computed(() => {
       </div>
     </div>
     <div class="flex flex-col align-center border-t border-b py-6 mx-6">
-      <p>Hợp hoá tinh hoa chất liệu văn hoá trong diện mạo hiện đại,</p>
-      <p>trong diện mạo hiện đại, dây hoa da</p>
-      <p>là tặng phẩm cao cấp Phùng Ân thiết kế </p>
-      <p>và sản xuất dành riêng cho mùa trăng 2023.</p>
+      <p class="px-6 text-center">Hợp hoá tinh hoa chất liệu văn hoá trong diện mạo hiện đại, dây hoa da là tặng phẩm cao cấp Phùng Ân thiế kế  và sản xuất dành riêng cho mùa trăng 2023.</p>
     </div>
     <div class="my-6 flex justify-center items-center">
       <Capture></Capture>
