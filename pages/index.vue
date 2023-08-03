@@ -7,7 +7,7 @@ const colors = [
   { name: 'pink', class: 'bg-pin', text: 'text-pin', selectedClass: 'ring-gray-500', image: "/images/PA_Trung thu 2023_Charm Customize.33.png" },
   { name: 'yellow', class: 'bg-yel', text: 'text-yel', selectedClass: 'ring-gray-500', image: "/images/PA_Trung thu 2023_Charm Customize.30.png" },
   { name: 'green', class: 'bg-gre', text: 'text-gre', selectedClass: 'ring-gray-500', image: "/images/PA_Trung thu 2023_Charm Customize.27.png" },
-  { name: 'blue', class: 'bg-blu', text: 'text-blu', selectedClass: 'ring-gray-500', image: "/images/PA_Trung thu 2023_Charm Customize.24.png" },
+  // { name: 'blue', class: 'bg-blu', text: 'text-blu', selectedClass: 'ring-gray-500', image: "/images/PA_Trung thu 2023_Charm Customize.24.png" },
 ]
 
 const canhColors = [
@@ -16,7 +16,7 @@ const canhColors = [
   { name: 'pink', class: 'bg-pin', text: 'text-pin', selectedClass: 'ring-gray-500', image: "/images/PA_Trung thu 2023_Charm Customize.34.png" },
   { name: 'yellow', class: 'bg-yel', text: 'text-yel', selectedClass: 'ring-gray-500', image: "/images/PA_Trung thu 2023_Charm Customize.31.png" },
   { name: 'green', class: 'bg-gre', text: 'text-gre', selectedClass: 'ring-gray-500', image: "/images/PA_Trung thu 2023_Charm Customize.28.png" },
-  { name: 'blue', class: 'bg-blu', text: 'text-blu', selectedClass: 'ring-gray-500', image: "/images/PA_Trung thu 2023_Charm Customize.25.png" },
+  // { name: 'blue', class: 'bg-blu', text: 'text-blu', selectedClass: 'ring-gray-500', image: "/images/PA_Trung thu 2023_Charm Customize.25.png" },
 ]
 
 const nhuyColors = [
@@ -25,7 +25,7 @@ const nhuyColors = [
   { name: 'pink', class: 'bg-pin', text: 'text-pin', selectedClass: 'ring-gray-500', image: "/images/PA_Trung thu 2023_Charm Customize.35.png" },
   { name: 'yellow', class: 'bg-yel', text: 'text-yel', selectedClass: 'ring-gray-500', image: "/images/PA_Trung thu 2023_Charm Customize.32.png" },
   { name: 'green', class: 'bg-gre', text: 'text-gre', selectedClass: 'ring-gray-500', image: "/images/PA_Trung thu 2023_Charm Customize.29.png" },
-  { name: 'blue', class: 'bg-blu', text: 'text-blu', selectedClass: 'ring-gray-500', image: "/images/PA_Trung thu 2023_Charm Customize.26.png" },
+  // { name: 'blue', class: 'bg-blu', text: 'text-blu', selectedClass: 'ring-gray-500', image: "/images/PA_Trung thu 2023_Charm Customize.26.png" },
 ]
 
 
