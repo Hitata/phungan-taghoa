@@ -118,7 +118,7 @@ const url: any = computed(() => {
       </div>
     </div>
     <div class="flex flex-col align-center border-t border-b py-6 mx-6">
-      <p class="px-4 text-center">Hợp hoá tinh hoa chất liệu văn hoá trong diện mạo hiện đại, dây hoa da là tặng phẩm cao cấp Phùng Ân thiết kế  và sản xuất dành riêng cho<br>mùa trăng 2023.</p>
+      <p class="px-4 text-center">Hợp hoá tinh hoa chất liệu văn hoá<br>trong diện mạo hiện đại, dây hoa da là tặng phẩm cao cấp Phùng Ân thiết kế  và sản xuất dành riêng cho mùa trăng 2023.</p>
     </div>
     <div class="my-6 flex justify-center items-center">
       <Capture></Capture>
