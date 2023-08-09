@@ -138,9 +138,10 @@ onMounted(() => {
         </v-sheet>
       </v-window-item>
     </v-window>
-    <div id="capture" class="w-full mx-auto">
-      <div class="relative flex justify-center bg-white">
-        <img :src="selectedColor.image" :alt="selectedColor.image" class="h-full w-auto object-cover object-center">
+    <div class="relative">
+      <div class="w-full relative flex bg-white">
+        <img :src="selectedColor.image" :alt="selectedColor.image"
+          class="h-full w-auto object-cover object-center">
         <img :src="selectedCanhColor.image" :alt="selectedCanhColor.image"
           class="h-full w-auto absolute object-cover object-center">
         <img :src="selectedNhuyColor.image" :alt="selectedNhuyColor.image"
@@ -148,16 +149,15 @@ onMounted(() => {
           <!-- <canvas
             id="myCanvas"
             class="absolute font-candara"></canvas> -->
-        <div class="justify-self-center relative -rotate-90">
-          <div class="absolute -left-9 -top-3.5">
+      </div>
+      <div class="absolute top-1/2 left-1/2">
+          <div class="-rotate-90 -ml-11 -mt-6">
             <div class="h-6 w-24 flex justify-center">
               <span
-                class="uppercase"
-                style="font-family: 'Candara', sans-serif;"
+                class="uppercase font-candara"
                 :class="[isBlack ? 'text-whi' : 'text-bla']">{{ ten }}</span>
               </div>
-            </div>
-          </div>
+        </div>
       </div>
     </div>
     <div class="flex flex-col align-center border-t border-b py-6 mx-6">
@@ -166,6 +166,26 @@ onMounted(() => {
     <div class="my-6 flex justify-center items-center">
       <Capture></Capture>
     </div>
+    <div class="relative">
+      <div id="capture" class="hidden w-full relative flex bg-white">
+        <img :src="selectedColor.image" :alt="selectedColor.image"
+          class="rotate-90 h-full w-auto object-cover object-center">
+        <img :src="selectedCanhColor.image" :alt="selectedCanhColor.image"
+          class="rotate-90 h-full w-auto absolute object-cover object-center">
+        <img :src="selectedNhuyColor.image" :alt="selectedNhuyColor.image"
+          class="rotate-90 h-full w-auto absolute object-cover object-center">
+        <div class="absolute top-1/2 left-1/2">
+            <div class="-ml-8 -mt-4">
+              <div class="h-6 w-24 flex justify-center">
+                <span
+                  class="uppercase font-candara"
+                  :class="[isBlack ? 'text-whi' : 'text-bla']">{{ ten }}</span>
+                </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
   </div>
 </template>
 <style>
