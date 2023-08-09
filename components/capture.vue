@@ -17,7 +17,8 @@ const download = (url) => {
 const capture = () => {
   html2canvas(document.querySelector("#capture"), options).then(canvas => {
     document.body.appendChild(canvas)
-    // download(canvas.toDataURL())
+    console.log(canvas)
+    download(canvas.toDataURL())
   });
 }
 
@@ -37,6 +38,6 @@ const anotherCapture = () => {
 </script>
 
 <template>
-  <v-btn rounded class="w-32" variant="outlined" elevation="5" size="large" color="bg-white" @click="anotherCapture">TẢI
+  <v-btn rounded class="w-32" variant="outlined" elevation="5" size="large" color="bg-white" @click="capture">TẢI
     VỀ</v-btn>
 </template>

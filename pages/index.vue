@@ -33,7 +33,7 @@ const selectedColor = useState('share-this', () => colors[0]);
 const isBlack = computed(() => selectedColor.value.name == 'black')
 const selectedCanhColor = ref(canhColors[0])
 const selectedNhuyColor = ref(nhuyColors[0])
-const ten = ref('phungan')
+const ten = ref('PHUNGAN')
 const tab = ref(null)
 const files = ref(undefined)
 
@@ -45,36 +45,74 @@ const url: any = computed(() => {
   if (!files.value[0]) return
   return URL.createObjectURL(files.value[0])
 })
+
+const options = {
+  width: 448,
+  height: 433
+};
+const scaleCanvas = (canvas, width, height) => {
+  // window.devicePixelRatio = 1;
+  // const ratio = Math.ceil(window.devicePixelRatio);
+  canvas.width = width;
+  canvas.height = height;
+  // canvas.style.width = `${width}px`;
+  // canvas.style.height = `${height}px`
+  // canvas.getContext('2d').scale(ratio, ratio);
+}
+
+const drawCanvas = () => {
+  const canvas = document.getElementById('myCanvas')
+  if (canvas == null || canvas == undefined) {
+    return
+  }
+  scaleCanvas(canvas, options.width, options.height)
+  const ctx = canvas.getContext('2d')
+
+  ctx.rotate(-Math.PI / 2)
+  ctx.translate(-canvas.height, 0)
+
+  ctx.font = "16px Candara"
+  ctx.fillStyle = '#272727'
+  if (isBlack.value) {
+    ctx.fillStyle = '#ded9cc'
+  }
+  ctx.textAlign = "center"
+  ctx.textBaseline = "middle"
+  ctx.fillText(ten.value, canvas.width / 2, canvas.height / 2 + 13)
+}
+
+const uppercase = () => {
+  ten.value = ten.value.toUpperCase()
+}
+
+watch([ten, selectedColor], () => {
+  drawCanvas()
+})
+
+onMounted(() => {
+  drawCanvas()
+})
 </script>
 <template>
-  <v-card>
-    <v-toolbar color="transparent" class="px-0">
-      <v-toolbar-title>
-        <img src="/images/phungan-logo.png" alt="PHÙNG ÂN logotype" width="125px" />
-      </v-toolbar-title>
-      <v-spacer></v-spacer>
-      <v-app-bar-nav-icon></v-app-bar-nav-icon>
-      <template v-slot:extension>
-        <v-tabs v-model="tab" color="primary" align-tabs="center" grow>
-          <v-tab value="one">
-            <span class="" :class="[selectedColor ? selectedColor.text : null]">Dây</span>
-            <!-- <v-icon>mdi-phone</v-icon> -->
-          </v-tab>
-          <v-tab value="two">
-            <span class="" :class="[selectedCanhColor ? selectedCanhColor.text : null]">Cánh</span>
-            <!-- <v-icon>mdi-heart</v-icon> -->
-          </v-tab>
-          <v-tab value="three">
-            <span class="" :class="[selectedNhuyColor ? selectedNhuyColor.text : null]">Nhụy</span>
-            <!-- <v-icon>mdi-account-box</v-icon> -->
-          </v-tab>
-          <v-tab value="four">
-            Khắc Chữ
-            <!-- <v-icon>mdi-account-box</v-icon> -->
-          </v-tab>
-        </v-tabs>
-      </template>
-    </v-toolbar>
+  <div>
+    <v-tabs v-model="tab" color="primary" align-tabs="center" grow>
+      <v-tab value="one">
+        <span class="" :class="[selectedColor ? selectedColor.text : null]">Dây</span>
+        <!-- <v-icon>mdi-phone</v-icon> -->
+      </v-tab>
+      <v-tab value="two">
+        <span class="" :class="[selectedCanhColor ? selectedCanhColor.text : null]">Cánh</span>
+        <!-- <v-icon>mdi-heart</v-icon> -->
+      </v-tab>
+      <v-tab value="three">
+        <span class="" :class="[selectedNhuyColor ? selectedNhuyColor.text : null]">Nhụy</span>
+        <!-- <v-icon>mdi-account-box</v-icon> -->
+      </v-tab>
+      <v-tab value="four">
+        Khắc Chữ
+        <!-- <v-icon>mdi-account-box</v-icon> -->
+      </v-tab>
+    </v-tabs>
     <v-window v-model="tab">
       <v-window-item value="one">
         <items v-model="selectedColor" :colors="colors" />
@@ -89,6 +127,8 @@ const url: any = computed(() => {
         <v-sheet class="ma-2 pa-3">
           <v-text-field
             v-model="ten"
+            @keyup="uppercase"
+            class="font-candara"
             label="Khắc chữ"
             density="compact"
             clearable
@@ -105,16 +145,19 @@ const url: any = computed(() => {
           class="h-full w-auto absolute object-cover object-center">
         <img :src="selectedNhuyColor.image" :alt="selectedNhuyColor.image"
           class="h-full w-auto absolute object-cover object-center">
+          <!-- <canvas
+            id="myCanvas"
+            class="absolute font-candara"></canvas> -->
         <div class="justify-self-center relative -rotate-90">
-         <div class="absolute -left-9 -top-3.5">
+          <div class="absolute -left-9 -top-3.5">
             <div class="h-6 w-24 flex justify-center">
               <span
                 class="uppercase"
                 style="font-family: 'Candara', sans-serif;"
                 :class="[isBlack ? 'text-whi' : 'text-bla']">{{ ten }}</span>
+              </div>
             </div>
           </div>
-        </div>
       </div>
     </div>
     <div class="flex flex-col align-center border-t border-b py-6 mx-6">
@@ -123,5 +166,15 @@ const url: any = computed(() => {
     <div class="my-6 flex justify-center items-center">
       <Capture></Capture>
     </div>
-  </v-card>
+  </div>
 </template>
+<style>
+.vertical-text {
+  writing-mode: vertical-rl;
+  text-align: center;
+  height: 200px; /* Set the height of the container */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+</style>
