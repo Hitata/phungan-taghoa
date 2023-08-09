@@ -169,13 +169,13 @@ onMounted(() => {
     <div class="relative">
       <div id="capture" class="hidden w-full relative flex bg-white">
         <img :src="selectedColor.image" :alt="selectedColor.image"
-          class="rotate-90 h-full w-auto object-cover object-center">
+          class="h-full w-auto object-cover object-center">
         <img :src="selectedCanhColor.image" :alt="selectedCanhColor.image"
-          class="rotate-90 h-full w-auto absolute object-cover object-center">
+          class="h-full w-auto absolute object-cover object-center">
         <img :src="selectedNhuyColor.image" :alt="selectedNhuyColor.image"
-          class="rotate-90 h-full w-auto absolute object-cover object-center">
+          class="h-full w-auto absolute object-cover object-center">
         <div class="absolute top-1/2 left-1/2">
-            <div class="-ml-8 -mt-4">
+            <div class="-rotate-90 -mt-6" style="margin-left:-52px">
               <div class="h-6 w-24 flex justify-center">
                 <span
                   class="uppercase font-candara"
