@@ -7,7 +7,7 @@ export default defineNuxtConfig({
     '@invictus.codes/nuxt-vuetify',
   ],
   css: [
-    "/public/global.css"
+    "/global.css"
   ],
   vuetify: {
     /* vuetify options */

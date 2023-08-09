@@ -98,8 +98,8 @@ const url: any = computed(() => {
         </v-sheet>
       </v-window-item>
     </v-window>
-    <div id="capture" class="w-full mx-auto bg-slate">
-      <div class="relative flex justify-center">
+    <div id="capture" class="w-full mx-auto">
+      <div class="relative flex justify-center bg-white">
         <img :src="selectedColor.image" :alt="selectedColor.image" class="h-full w-auto object-cover object-center">
         <img :src="selectedCanhColor.image" :alt="selectedCanhColor.image"
           class="h-full w-auto absolute object-cover object-center">
