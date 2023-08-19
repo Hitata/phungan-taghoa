@@ -131,6 +131,8 @@ onMounted(() => {
             class="font-candara"
             label="Khắc chữ"
             density="compact"
+            :maxlength="10"
+            :counter="10"
             clearable
           ></v-text-field>
           <!-- <v-file-input v-model="files" :rules="rules" chips accept="image/png, image/jpeg, image/bmp" density="compact"
